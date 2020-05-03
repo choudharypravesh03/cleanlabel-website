@@ -5,10 +5,14 @@ const Title = styled.h2`
     font-size: 22px;
     line-height: 32px;
     color: #161616;
+    font-family: 'UntitledSansLight', sans-serif;
+    @media screen and (max-width: 768px) {
+        font-size: 18px;
+    }
 `
 
 const HorizontalLine = styled.hr`
-    margin: 20px 0px 20px -50px;
+    margin: 14px 0px 20px -50px;
     border: 1px solid #E5E5E5;
 }
 `

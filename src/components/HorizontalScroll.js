@@ -1,5 +1,6 @@
 import React from "react";
 import ScrollMenu from "react-horizontal-scrolling-menu";
+import styled from 'styled-components';
 
 
 const HorizontalScroll = ({
@@ -15,7 +16,8 @@ const HorizontalScroll = ({
   clickWhenDrag,
   wheel,
   list,
-  MenuItem
+  MenuItem,
+  className
 }) => {
 
 
@@ -39,24 +41,30 @@ const HorizontalScroll = ({
   let menu = Menu(list.slice(0, list.length), selected);
 
   return (
-    <ScrollMenu
-      ref={el => (menu = el)}
-      data={menu}
-      // arrowLeft={ArrowLeft}
-      // arrowRight={ArrowRight}
-      hideArrows={hideArrows}
-      hideSingleArrow={hideSingleArrow}
-      transition={+transition}
-      onUpdate={onUpdate}
-      onSelect={onSelect}
-      selected={selected}
-      translate={translate}
-      alignCenter={alignCenter}
-      dragging={dragging}
-      clickWhenDrag={clickWhenDrag}
-      wheel={wheel}
-    />
+    <div className={className}>
+      <ScrollMenu
+        ref={el => (menu = el)}
+        data={menu}
+        // arrowLeft={ArrowLeft}
+        // arrowRight={ArrowRight}
+        hideArrows={hideArrows}
+        hideSingleArrow={hideSingleArrow}
+        transition={+transition}
+        onUpdate={onUpdate}
+        onSelect={onSelect}
+        selected={selected}
+        translate={translate}
+        alignCenter={alignCenter}
+        dragging={dragging}
+        clickWhenDrag={clickWhenDrag}
+        wheel={wheel}
+      />
+    </div>
   );
 }; 
 
-export default HorizontalScroll;
+export default styled(HorizontalScroll)`
+  .menu-item-wrapper {
+    outline: 0;
+  }
+`

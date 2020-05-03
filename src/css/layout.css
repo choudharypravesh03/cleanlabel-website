@@ -1,11 +1,29 @@
 @font-face {
-    font-family: 'UntitledSans';
+    font-family: 'UntitledSansRegular';
     src: url('../assets/Untitled\ Sans\ Regular.eot'); /* IE9 Compat Modes */
     src: url('../assets/Untitled\ Sans\ Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
          url('../assets/Untitled\ Sans\ Regular.woff2') format('woff2'), /* Super Modern Browsers */
          url('../assets/Untitled\ Sans\ Regular.woff') format('woff'), /* Pretty Modern Browsers */
          url('../assets/Untitled\ Sans\ Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
-  }
+}
+
+@font-face {
+  font-family: 'UntitledSansBlack';
+  src: url('../assets/Untitled\ Sans\ Black.ttf'); /* IE9 Compat Modes */
+  src: url('../assets/Untitled\ Sans\ Black.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'UntitledSansLight';
+  src: url('../assets/Untitled\ Sans\ Light.ttf'); /* IE9 Compat Modes */
+  src: url('../assets/Untitled\ Sans\ Light.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'UntitledSansMedium';
+  src: url('../assets/Untitled\ Sans\ Medium.ttf'); /* IE9 Compat Modes */
+  src: url('../assets/Untitled\ Sans\ Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
 
 :root {
   --primaryColor: #3fd0d4;
@@ -14,6 +32,7 @@
   --darkGreen: #10665C;
   --offWhite: #f7f7f7;
   --mainBlack: #222;
+  --offBlack: #272727;
   --mainGrey: #ececec;
   --darkGrey: #cfcfcf;
   --mainTransition: all 0.3s linear;
@@ -29,7 +48,7 @@
 }
 
 body {
-  font-family: "UntitledSans", sans-serif;
+  font-family: "UntitledSansRegular", sans-serif;
   color: var(--mainBlack);
   background: var(--lightGrey);
   line-height: 1.4;
@@ -41,12 +60,12 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "UntitledSans", sans-serif;
-  margin-bottom: 1.25rem;
+  font-family: "UntitledSansRegular", sans-serif;
+  /* margin-bottom: 1.25rem; */
   /* letter-spacing: var(--mainSpacing); */
 }
 p {
-  margin-bottom: 1.25rem;
+  /* margin-bottom: 1.25rem; */
 }
 .defaultHero {
   min-height: calc(100vh - 62px);
@@ -89,4 +108,12 @@ main {
 
 .container {
   padding: 30px 0px 30px 50px;
+  max-width: 1680px;
+  margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 16px 0px 0px 16px;
+  }
 }

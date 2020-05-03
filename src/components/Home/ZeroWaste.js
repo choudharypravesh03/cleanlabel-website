@@ -13,18 +13,7 @@ const ZeroWaste = () => {
           </div>
         </article>
         <article className={styles.aboutInfo}>
-          <h4>explore the difference</h4>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla
-            doloribus enim necessitatibus?
-          </p>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla
-            doloribus enim necessitatibus?
-          </p>
-          <button type="button" className="btn-primary">
-            read more
-          </button>
+          <h4>Zero waste delivery system to reduce plastics</h4>
         </article>
       </div>
     </section>

@@ -1,10 +1,10 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import HorizontalScroll from '../../components/HorizontalScroll';
 import SectionHeader from '../Home/partials/SectionHeader';
 import styled from 'styled-components';
 import img from '../../images/cleanlabel-item-1.png';
 
-const Trending = ({list}) => {
+const Trending = ({ list }) => {
     const [selected, setSelected] = useState("Organic Basmati Rice1");
 
     const onUpdate = ({ translate }) => {
@@ -12,7 +12,7 @@ const Trending = ({list}) => {
         //this.setState({ translate });
         // setTranslate(translate);
     };
-    
+
     const onSelect = key => {
         console.log(`onSelect: ${key}`);
         setSelected(key);
@@ -20,26 +20,45 @@ const Trending = ({list}) => {
 
     const MenuItem = ({ text, price, selected }) => {
         return (
-          <MenuItemStyled className={`menu-item ${selected ? "active" : ""}`}>
-            <img src={img} />
-            <div>{text}</div>
-            <div>Rs. {price}</div>
-          </MenuItemStyled>
+            <MenuItemStyled className={`menu-item ${selected ? "active" : ""}`}>
+                <img src={img} />
+                <p>{text}</p>
+                {/* <div>Rs. {price}</div> */}
+            </MenuItemStyled>
         );
     };
-    
-    
+
+
     const MenuItemStyled = styled.div`
       width: 254px;
       height: 270px;
-      background: #FFFFFF;
+      background: #ffffff;
       box-shadow: 0px 1px 10px rgba(242, 242, 242, 0.8);
       border-radius: 5px;
       text-align: center;
-      margin: 5px 10px;
+      margin: 5px 10px 5px 0px;
       user-select: none;
       cursor: pointer;
       border: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 90%;
+        position: relative;
+        bottom: 12px;
+      }
+      p {
+        font-size: 14px;
+      }
+      @media screen and (max-width: 768px) {
+        width: 165px;
+        height: 171px;
+        p {
+          font-size: 12px;
+        }
+      }
     `
 
 

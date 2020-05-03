@@ -2,7 +2,9 @@ import React, {useState} from 'react'
 import links from '../constants/links';
 import {Link} from 'gatsby';
 import styles from '../css/navbar.module.css';
-import logo from '../images/cleanlabel-logo.png';
+import logoDesktop from '../images/cleanlabel-logo.png';
+import logoMobile from '../images/cleanlabel-logo-mob.png';
+import hamburgerMenu from '../images/hamburger-menu.png';
 
 const Navbar = () => {
     const [isOpen, setNav] = useState();
@@ -13,12 +15,14 @@ const Navbar = () => {
         <nav className={styles.navbar}>
             <div className={styles.navCenter}>
                 <div className={styles.navHeader}>
-                    <img src={logo} alt="cleanlabel logo" />
                     <button type="button" className={styles.logoBtn} onClick={toggleNav}>
-                        link
+                        <img src={hamburgerMenu} />
                     </button>
+                    <img className={styles.logoDesktop} src={logoDesktop} alt="cleanlabel logo" />
+                    <img className={styles.logoMobile} src={logoMobile} alt="cleanlabel logo" />
+                    <Link to={"#"}>Bag</Link>
                 </div>
-                <div className="links-1-section">
+                <div className={styles.links1Section}>
                     <ul className={
                         isOpen ? `${styles.navLinks} ${styles.showNav}`
                         : `${styles.navLinks}`
@@ -32,7 +36,7 @@ const Navbar = () => {
                         })}
                     </ul>
                 </div>
-                <div className="links-2-section">
+                <div className={styles.links2Section}>
                     <ul className={`${styles.navLinks} ${styles.showNav}`}>
                         {links.links2.map((item, index) => {
                             return (
