@@ -82,7 +82,8 @@ const Kits = ({className}) => {
             font-size: 14px;
         }
       @media screen and (max-width: 768px) {
-        
+        width: 97%;
+        height: 210px;
       }
     `
 

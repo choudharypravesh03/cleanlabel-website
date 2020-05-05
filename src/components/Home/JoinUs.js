@@ -45,7 +45,6 @@ const MenuItemStyled = styled.div`
   justify-content: space-between;
   h3 {
     font-size: 22px;
-    line-height: 28px;
   }
   img {
     width: 156px;
@@ -61,6 +60,23 @@ const MenuItemStyled = styled.div`
     width: 100%;
     border: 1px solid var(--mainWhite);
     padding: 10px;
+  }
+  @media screen and (max-width: 768px) {
+    width: 165px;
+    height: 239px;
+    padding: 10px;
+    h3 {
+      font-size: 14px;
+    }
+    img {
+      width: 50%;
+      display: block;
+      margin: auto;
+    }
+    a {
+      font-size: 12px;
+      padding: 5px;
+    }
   }
 `
 

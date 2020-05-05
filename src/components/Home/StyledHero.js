@@ -41,7 +41,7 @@ export default styled(StyledHero)`
     .content {
         color: var(--offBlack);
         font-size: 37.5px;
-        font-family: 'UntitledSansMedium', sans-serif;
+        font-family: 'UntitledSansRegular', sans-serif;
         padding: 7rem 7rem 5rem 7rem;
         align-self: flex-start;
         flex-grow: 1;
@@ -49,7 +49,7 @@ export default styled(StyledHero)`
         width: 50%;
         max-width: 48rem;
         margin: 0 auto;
-        padding: 5rem 5rem 3rem 5rem;
+        padding: 50px;
     }
     .image {
         flex-grow: 0;
