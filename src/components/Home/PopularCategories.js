@@ -40,17 +40,15 @@ const MenuItem = ({ text, price, selected, backgroundImage }) => {
 
 
 const MenuItemStyled = styled.div`
-  width: 188px;
-  height: 176px;
-  background-image: url(${props => props.backgroundImage});
+  width: 301px;
+  height: 317px;
+  background-image: linear-gradient(130.86deg, #000000 -2.4%, rgba(255, 255, 255, 0) 72.57%), url(${props => props.backgroundImage});
+  background-repeat: no-repeat;
   border-radius: 3px;
-  margin: 5px 10px;
+  margin: 5px 10px 5px 0px;
   user-select: none;
   border: none;
   padding: 27px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   h3 {
     font-size: 22px;
     line-height: 28px;

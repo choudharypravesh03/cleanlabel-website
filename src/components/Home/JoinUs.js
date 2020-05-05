@@ -2,22 +2,27 @@ import React, {useState} from 'react'
 import SectionHeader from '../Home/partials/SectionHeader';
 import HorizontalScroll from '../HorizontalScroll'
 import styled from 'styled-components';
-import img from '../../images/Group.png';
+import img1 from '../../images/joinus-1.png';
+import img2 from "../../images/join-us-zero.png";
+import img3 from "../../images/joinus-sustainability.png";
 import {Link} from 'gatsby';
 
 const list = [
-    { id: 'item1', name: "Circular Economy", price: 210 },
-    { id: 'item2', name: "Zero Waste Completely Organic", price: 210 },
-    { id: 'item3', name: "Sustainability", price: 210 },
-    { id: 'item4', name: "Save on deposits with our subscriptions", price: 210 },
+    { id: 'item1', name: "Circular Economy", cta: "learn more", image: img1, backgroundColor: '#98C4C9' },
+    { id: 'item2', name: "Zero Waste Completely Organic", cta: "learn more", image: img2, backgroundColor: '#DDA06F' },
+    { id: 'item3', name: "Sustainability", cta: "learn more", image: img3, backgroundColor: '#FFC83D' },
+    { id: 'item4', name: "Save on deposits with our subscriptions", cta: "subscribe now", image: "", backgroundColor: '#37A08E' }
 ];
 
-const MenuItem = ({ text, price, selected }) => {
+const MenuItem = ({ text, price, selected, image, backgroundImage, cta, backgroundColor }) => {
     return (
-      <MenuItemStyled className={`menu-item ${selected ? "active" : ""}`}>
+      <MenuItemStyled 
+        className={`menu-item ${selected ? "active" : ""}`}
+        backgroundColor={backgroundColor}
+      >
         <h3>{text}</h3>
-        <img src={img} />
-        <Link to="">Learn more</Link>
+        <img src={image} />
+        <Link to="">{cta}</Link>
       </MenuItemStyled>
     );
 };
@@ -25,14 +30,16 @@ const MenuItem = ({ text, price, selected }) => {
 
 const MenuItemStyled = styled.div`
   width: 321px;
+  text-align: center;
   height: 465px;
-  background: #ed907f;
+  background: ${p => p.backgroundColor};
+  font-family: 'UntitledSansLight', sans-serif;
   color: var(--mainWhite);
   border-radius: 3px;
-  margin: 5px 10px;
+  margin: 5px 10px 5px 0px;
   user-select: none;
   border: none;
-  padding: 27px 24px;
+  padding: 27px 24px 15px 24px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -46,12 +53,14 @@ const MenuItemStyled = styled.div`
     margin: auto;
   }
   a {
-    font-size: 20px;
+    font-size: 14px;
     text-decoration: none;
-    text-align: right;
+    text-transform: uppercase;
     color: inherit;
-    border-bottom: 1px solid;
-    width: fit-content;
+    display: block;
+    width: 100%;
+    border: 1px solid var(--mainWhite);
+    padding: 10px;
   }
 `
 

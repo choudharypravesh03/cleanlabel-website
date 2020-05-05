@@ -40,7 +40,7 @@ export default () => {
     <Layout>
         <StyledHero img={heroImage} />
         <Trending list={list} />
-        <ZeroWaste />
+        {/* <ZeroWaste /> */}
         <Kits />
         <JoinUs />
         <PopularCategories />

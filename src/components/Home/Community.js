@@ -11,6 +11,10 @@ const list = [
     { id: 'item2', name: "Meenal, Bengaluru", price: "Used the oil other day and really liked it. Its thicker than the market counterparts, so I ended up using lesser amount. The colour and smell are natural that reminded me of my childhood days" },
     { id: 'item3', name: "Meenal, Bengaluru", price: "Used the oil other day and really liked it. Its thicker than the market counterparts, so I ended up using lesser amount. The colour and smell are natural that reminded me of my childhood days" },
     { id: 'item4', name: "Meenal, Bengaluru", price: "Used the oil other day and really liked it. Its thicker than the market counterparts, so I ended up using lesser amount. The colour and smell are natural that reminded me of my childhood days" },
+    { id: 'item5', name: "Meenal, Bengaluru", price: "Used the oil other day and really liked it. Its thicker than the market counterparts, so I ended up using lesser amount. The colour and smell are natural that reminded me of my childhood days" },
+    { id: 'item6', name: "Meenal, Bengaluru", price: "Used the oil other day and really liked it. Its thicker than the market counterparts, so I ended up using lesser amount. The colour and smell are natural that reminded me of my childhood days" },
+    { id: 'item7', name: "Meenal, Bengaluru", price: "Used the oil other day and really liked it. Its thicker than the market counterparts, so I ended up using lesser amount. The colour and smell are natural that reminded me of my childhood days" },
+    { id: 'item8', name: "Meenal, Bengaluru", price: "Used the oil other day and really liked it. Its thicker than the market counterparts, so I ended up using lesser amount. The colour and smell are natural that reminded me of my childhood days" },
   ];
 
 const MenuItem = ({ text, price, selected, backgroundImage }) => {
@@ -29,28 +33,29 @@ const MenuItem = ({ text, price, selected, backgroundImage }) => {
 
 
 const MenuItemStyled = styled.div`
-  width: 600px;
-  height: 176px;
+  width: 605px;
+  background-color: var(--mainWhite);
+  height: 225px;
   background-image: url(${props => props.backgroundImage});
   border-radius: 3px;
   font-size: 14px;
-  margin: 5px 10px;
+  margin: 5px 10px 5px 0px;
   user-select: none;
   border: none;
-  padding: 27px 24px;
+  padding: 27px 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   h4 {
-    font-size: 12px;
+    font-size: 16px;
     line-height: 28px;
-    margin-bottom: 0;
+    margin-bottom: 10px;
   }
   img {
       width: 83px;
       height: 83px;
       border-radius: 50%;
-      margin-right: 12px;
+      margin-right: 42px;
   }
 `
 
@@ -67,7 +72,7 @@ const Community = ({className}) => {
                         hideArrows={false}
                         hideSingleArrow={true}
                         selected={selected}
-                        translate={0}
+                        translate={1}
                         alignCenter={true}
                         dragging={true}
                         clickWhenDrag={false}
@@ -80,9 +85,4 @@ const Community = ({className}) => {
     )
 }
 
-export default styled(Community)`
-    .scroll-box {
-        width: 50%;
-        margin: auto;
-    }
-`
+export default Community;

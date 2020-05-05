@@ -2,10 +2,10 @@ import React from 'react'
 import styled from 'styled-components';
 
 const Title = styled.h2`
-    font-size: 22px;
+    font-size: 30px;
     line-height: 32px;
     color: #161616;
-    font-family: 'UntitledSansLight', sans-serif;
+    font-family: 'UntitledSansRegular', sans-serif;
     @media screen and (max-width: 768px) {
         font-size: 18px;
     }

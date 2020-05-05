@@ -1,10 +1,7 @@
 @font-face {
     font-family: 'UntitledSansRegular';
-    src: url('../assets/Untitled\ Sans\ Regular.eot'); /* IE9 Compat Modes */
-    src: url('../assets/Untitled\ Sans\ Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('../assets/Untitled\ Sans\ Regular.woff2') format('woff2'), /* Super Modern Browsers */
-         url('../assets/Untitled\ Sans\ Regular.woff') format('woff'), /* Pretty Modern Browsers */
-         url('../assets/Untitled\ Sans\ Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+    src: url('../assets/Untitled\ Sans\ Regular.ttf'); /* IE9 Compat Modes */
+    src: url('../assets/Untitled\ Sans\ Regular.ttf?#iefix') format('embedded-opentype'), /* IE6-IE8 */
 }
 
 @font-face {
@@ -60,7 +57,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "UntitledSansRegular", sans-serif;
+  /* font-family: "UntitledSansRegular", sans-serif; */
   /* margin-bottom: 1.25rem; */
   /* letter-spacing: var(--mainSpacing); */
 }

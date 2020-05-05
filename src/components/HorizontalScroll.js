@@ -23,12 +23,15 @@ const HorizontalScroll = ({
 
   const Menu = (list) =>
     list.map(el => {
-      const { id, name, price, backgroundImage } = el;
+      const { id, name, price, backgroundImage, image, cta, backgroundColor } = el;
       return <MenuItem 
                 text={name} 
                 price={price} 
                 key={id}
+                image={image}
                 backgroundImage={backgroundImage}
+                cta={cta}
+                backgroundColor={backgroundColor}
               />;
     });
 
